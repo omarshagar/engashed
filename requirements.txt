@@ -1,0 +1,6 @@
+bs4
+requests
+lxml
+cssutils
+cssselect
+json-server

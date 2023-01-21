@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script
+			type="text/javascript"
+			src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"
+		></script>
+		<script type="text/x-mathjax-config">
+			MathJax.Hub.Config({
+			  extensions: ["tex2jax.js"],
+			  jax: ["input/TeX", "output/HTML-CSS"],
+			  tex2jax: {
+			    inlineMath: [ ['$$$','$$$'], ["\\(","\\)"] ],
+			    displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+
+			  },
+			  "HTML-CSS": { availableFonts: ["TeX"] }
+			});
+		</script>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>hat3ady ya dof3a</title>
+		<link rel="stylesheet" href="./A4.css" type="text/css" />
+		<!-- <script type="module" src="getData.js"></script> -->
+		<script src="script.js"></script>
+	</head>
+	<body style="--bleeding: 0.5cm; --margin: 1cm">
+		<!-- Coding Area prototype -->
+		<div class="code-page structure">
+			<div class="left-section"></div>
+			<div class="right-section"></div>
+		</div>
+		<!-- Thinking Area prototype -->
+		<div class="think-page page structure">
+			<div class="line structure"></div>
+		</div>
+		<!-- Problem input-output section prototype    -->
+		<div id="input-output" class="page structure">
+			<div class="top-part">input</div>
+			<div id="bot-part-input" class="bot-part">fgdf</div>
+			<div class="top-part">output</div>
+			<div id="bot-part-output" class="bot-part">fdgdfg</div>
+		</div>
+		<!-- Problem Page prototype -->
+		<div class="page basic-page structure">
+			<div class="page-header">
+				<span id="problem-name">Problem Name</span>
+				<span id="problem-link">Problem Link</span>
+			</div>
+
+			<div class="page-body">
+				<div class="title-section">
+					<div id="title">title</div>
+					<div id="timeLimit">time limit: <span class="value"></span></div>
+					<div id="memoryLimit">memory limit: <span class="value"></span></div>
+				</div>
+				<div id="statement"></div>
+				<div style="font-weight: bolder; padding-top: 10px" id="input-word">
+					Input
+				</div>
+				<div id="inputSpecification"></div>
+				<div style="font-weight: bolder; padding-top: 10px">Output</div>
+				<div id="outputSpecification"></div>
+				<div style="font-weight: bolder; padding-top: 10px">Example</div>
+				<div id="samples"></div>
+				<div style="font-weight: bolder; padding-top: 10px">Note</div>
+				<div id="notes"></div>
+			</div>
+			<div class="page-footer"></div>
+		</div>
+	</body>
+</html>
