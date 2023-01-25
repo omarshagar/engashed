@@ -20,8 +20,6 @@ const fetch_json = async (url) => {
 };
 
 function draw_from_json(url) {
-	url = "http://localhost:3000";
-
 	fetch_json(url).then((json) => {
 		draw_all_problems(json["data"]);
 	});
