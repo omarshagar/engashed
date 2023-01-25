@@ -19,6 +19,7 @@ thinking_pages = 1
 coding_pages = 1
 font_size = 12
 try:
+
     args = argParser.parse_args()
     thinking_pages = args.thinkingPages
     coding_pages = args.codingPages

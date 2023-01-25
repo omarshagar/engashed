@@ -16,11 +16,12 @@ let problem_counter = 0;
 const fetch_json = async (url) => {
 	let response = await fetch(url);
 	let json = await response.json();
-	console.log(json);
 	return json;
 };
 
 function draw_from_json(url) {
+	url = "http://localhost:3000";
+
 	fetch_json(url).then((json) => {
 		draw_all_problems(json["data"]);
 	});
@@ -137,18 +138,28 @@ function draw_all_problems(allproblems) {
 		draw_problem(problem, thinking_pages, coding_pages);
 	});
 }
+function add_mathJax() {
+	let script1 = document.createElement("script");
+	script1.type = "text/javascript";
+	script1.src =
+		"https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js";
+	document.head.appendChild(script1);
+}
 const get_json_metadata = async () => {
 	return fetch_json("../files/json.in").then((json) => {
 		url = "../files/JsonFiles/" + json["data"];
 		thinking_pages = json["thinking_pages"] ?? 1;
 		coding_pages = json["coding_pages"] ?? 1;
 		font_size = json["font_size"] ?? 12;
-		console.log(json);
 
 		return url;
 	});
 };
-get_json_metadata().then((url) => {
-	draw_from_json(url);
-	console.log("gg");
-});
+
+get_json_metadata()
+	.then((url) => {
+		draw_from_json(url);
+	})
+	.then(() => {
+		add_mathJax();
+	});
